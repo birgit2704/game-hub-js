@@ -28,7 +28,7 @@ const GameCardContainer = () => {
           name={game.name}
           image={game.background_image}
           metacritic={game.metacritic}
-          ratings={[game.ratings.title]}
+          platforms={game.parent_platforms}
           //   platforms= [] ich will ein array von game.parent_platform platform.name
         />
       ))}
