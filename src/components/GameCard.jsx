@@ -1,15 +1,12 @@
 import React from "react";
 import {
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
   Image,
   HStack,
   VStack,
   Heading,
   Text,
-  Icon,
 } from "@chakra-ui/react";
 
 const GameCard = ({ name, image, metacritic, platforms }) => {
