@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import axios, { CanceledError } from "axios";
+import GameCard from "./GameCard";
 
 const GameCardContainer = () => {
   const [games, setGames] = useState([]);
@@ -19,14 +20,19 @@ const GameCardContainer = () => {
   }, []);
 
   return (
-    <div>
-      {error && <Text color="red">{error}</Text>}
-      <ul>
-        {games.map((g) => (
-          <li>{g.name}</li>
-        ))}
-      </ul>
-    </div>
+    //   {error && <Text color="red">{error}</Text>}
+
+    <SimpleGrid columns={{ base: 1, sm: 2, md: 3, xl: 4 }} spacing="20px">
+      {games.map((game) => (
+        <GameCard
+          name={game.name}
+          image={game.background_image}
+          metacritic={game.metacritic}
+          ratings={[game.ratings.title]}
+          //   platforms= [] ich will ein array von game.parent_platform platform.name
+        />
+      ))}
+    </SimpleGrid>
   );
 };
 
