@@ -1,1 +1,1 @@
-same as my game-hub repository but with JavaSript insted of TypeScript
+same as my game-hub repository but with JavaSript instead of TypeScript
